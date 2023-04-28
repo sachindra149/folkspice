@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<include src="../partials/head.html"></include>
+	<meta name="description" content="" />
+	<link rel="stylesheet" href="../scss/stylesheet.scss" />
+	<title>Folkspice - Always Fresh</title>
+</head>
+
+<body role="main">
+	<header class="fullWidth">
+		<include src="../partials/top-strip.html"></include>
+		<section class="fullWidth top_carousal" role="banner" aria-labelledby="primaryCarousal">
+			<div class="about-us-image">&nbsp;</div>
+		</section>
+		<include src="../partials/navigation.html"></include>
+	</header>
+	<section class="fullWidth catalogue py-5 inner-pages contact-us">
+		<div class="container">
+			<div class="fullWidth pt-4">
+				<h1 class="lightWeight pb-4 px-lg-5 text-center">Contact Us</h1>
+				<p class="px-lg-5 text-center pb-5">Lorem Ipsum is simply dummy text of the printing and typesetting
+					industry. Lorem
+					Ipsum has been the
+					industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+					and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
+					leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
+					with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
+					publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+				</p>
+				<div class="row pt-5">
+					<div class="col-12 col-lg-6 col-md-6 col-sm-12 px-lg-5 text-left">
+						<h3>Get in Touch</h3>
+						<p>Have a question? Concern? Request? We'd love to hear from you. Connect with us through the
+							following ways.</p>
+						<h4>Address:</h4>
+						<p>Dhowa Pakhuri Gaon,
+							P.O. Bahona, Jorhat, Assam, India, Pin Code: 785101</p>
+						<h4>Phone:</h4>
+						<p>+91-967-844-31 29 / +91-985-437-56 42</p>
+						<h4>Email:</h4>
+						<p><a href="mailto:folkspice@gmail.com">folkspice@gmail.com</a></p>
+					</div>
+					<div class="col-12 col-lg-6 col-md-6 col-sm-12 px-lg-5">
+						<div class="fullWidth contact-form">
+							<h4>Fill out this short form and a member of our team will get back to you within 24 hours
+							</h4>
+							<form class="row pt-4" name="contact_form" onsubmit="return validateForm()" method="post">
+								<div class="col-12 col-lg-6 col-md-6 pb-4">
+									<input type="text" name="firstname" id="firstname" class="fullWidth" />
+									<label for="firstname">First Name<sup>*</sup></label>
+								</div>
+								<div class="col-12 col-lg-6 col-md-6 pb-4">
+									<input type="text" name="lastname" id="lastname" class="fullWidth" />
+									<label for="lastname">Last Name</label>
+								</div>
+								<div class="col-12 pb-4">
+									<input type="text" name="email" id="email" class="fullWidth" />
+									<label for="email">Email Address<sup>*</sup></label>
+								</div>
+								<div class="col-12 pb-4">
+									<input type="text" name="contact" id="contact" class="fullWidth" />
+									<label for="contact">Contact Number<sup>*</sup></label>
+								</div>
+								<div class="col-12 pb-4">
+									<textarea class="fullWidth" id="query" name="query" rows="5"></textarea>
+									<label for="message">Message<sup>*</sup></label>
+								</div>
+								<div class="col-12">
+									<input type="submit" name="submit" id="submit" class="button primary large"
+										value="Contact Us" />
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<include src="../partials/inner-page-common-footer.html"></include>
+	<script src="../js/contact.js"></script>
+</body>
+
+</html>

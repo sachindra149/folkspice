@@ -1,0 +1,27 @@
+{
+	"name": "folkspice",
+	"version": "1.0.0",
+	"description": "",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"clean": "rimraf dist",
+		"open": "parcel ./src/pages/*.html --open",
+		"dev": "npm run clean && parcel ./src/pages/index.html",
+		"build": "npm run clean && parcel build ./src/pages/index.html --public-url ./"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"@parcel/transformer-sass": "^2.6.2",
+		"parcel": "^2.6.2",
+		"postcss-preset-env": "^7.7.2",
+		"posthtml-content": "^0.1.0",
+		"posthtml-include": "^1.7.4",
+		"rimraf": "^3.0.2"
+	},
+	"dependencies": {
+		"bootstrap": "^5.1.3",
+		"jquery": "^3.6.0"
+	}
+}

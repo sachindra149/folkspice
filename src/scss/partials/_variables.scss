@@ -1,0 +1,98 @@
+:root {
+	// Colors
+	--color-white: #ffffff;
+	--color-black: #000000;
+	--color-brand: #e30614;
+	--color-brand-light: #e3061498;
+	--color-brand-dark:#96050e;
+	--color-secondary:#312b1d;
+	--color-secondary-light:#ac9a6b99;
+	--catalogue-border-color: #000000;
+	--input-box-border-color: #dee0e3;
+	// Dimensions
+	--top-strip-height: 30px;
+	--social-media-width: 50px;
+	--social-media-height: 50px;
+	--navigation-item-height: 45px;
+	--progress-bar-height: 4px;
+	// Backgrounds
+	--navigation-bg-color: #ffffff;
+	--home-page-section: #f7ebcb;
+	--home-about-us-section: rgba(243, 234, 207, 0.35);
+	--home-about-us-list-bg: rgba(243, 234, 207, 1);
+	--footer-bg: rgba(0, 0, 0, 0.75);
+	// Fonts
+	--primary-font: 'Poppins', sans-serif;
+	// Height
+	--home-carousal-height: 90vh;
+	--inner-page-carousal-height: 65vh;
+}
+@mixin box-shadow($property) {
+	box-shadow: $property;
+	-moz-box-shadow: $property;
+	-webkit-box-shadow: $property;
+}
+@mixin transition($property) {
+	transition: $property;
+	-moz-transition: $property;
+	-webkit-transition: $property;
+}
+@mixin background-opacity($color, $opacity) {
+	background: $color;
+	background: rgba($color, $opacity);
+}
+.lightWeight {
+	font-weight: 300;
+}
+.mediumWeight {
+	font-weight: 400;
+}
+.boldWeight {
+	font-weight: 500;
+}
+* {
+	box-sizing: border-box;
+}
+a {
+	text-decoration: none;
+	@include transition(all 0.25s ease-out 0s);
+	color: var(--color-brand);
+	&:hover, &:focus {
+		text-decoration: none;
+		color: var(--color-black);
+	}
+}
+.shadowed-bg {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	background: rgba(0, 0, 0, 0.5);
+	content: "";
+	z-index: 0;
+}
+.button {
+	padding: 0px 35px;
+	display: inline-block;
+	border-radius: 5px;
+	@include transition(all 0.25s ease 0s);
+	&.large {
+		line-height: 45px;
+	}
+	&:hover, &:focus {
+		background: var(--color-black);
+		color: var(--color-white);
+		border-color: var(--color-secondary);
+	}
+}
+.primary {
+	background: var(--color-brand);
+	border: 1px solid var(--color-brand);
+	color: var(--color-white);
+}
+.secondary {
+	background: transparent;
+	border: 1px solid var(--color-brand);
+	color: var(--color-brand);
+}
