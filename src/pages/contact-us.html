@@ -46,7 +46,8 @@
 						<div class="fullWidth contact-form">
 							<h4>Fill out this short form and a member of our team will get back to you within 24 hours
 							</h4>
-							<form class="row pt-4" name="contact_form" onsubmit="return validateForm()" method="post">
+							<form name="contact_form" class="row pt-4" onsubmit="return validateForm()" method="post"
+								action="#">
 								<div class="col-12 col-lg-6 col-md-6 pb-4">
 									<input type="text" name="firstname" id="firstname" class="fullWidth" />
 									<label for="firstname">First Name<sup>*</sup></label>
@@ -68,8 +69,18 @@
 									<label for="message">Message<sup>*</sup></label>
 								</div>
 								<div class="col-12">
-									<input type="submit" name="submit" id="submit" class="button primary large"
-										value="Contact Us" />
+									<!-- <input type="submit" name="submit" id="submit" class="button primary large"
+										value="Contact Us" /> -->
+									<div class="g-recaptcha pb-4"
+										data-sitekey="6Ld9ctAlAAAAAEd3caBR6XSwk2LVW8uiC6ZKKYRB">
+									</div>
+									<button class="g-recaptcha button primary large"
+										data-sitekey="6Ld9ctAlAAAAAEd3caBR6XSwk2LVW8uiC6ZKKYRB" data-callback="onSubmit"
+										data-action="submit" name="submit" id="submit" value="Contact Us">Contact
+										Us</button>
+									<!-- <button class="g-recaptcha button primary large"
+										data-sitekey="6Ld9ctAlAAAAAEd3caBR6XSwk2LVW8uiC6ZKKYRB" data-callback='onSubmit'
+										data-action='submit'>Submit</button> -->
 								</div>
 							</form>
 						</div>
@@ -79,6 +90,8 @@
 		</div>
 	</section>
 	<include src="../partials/inner-page-common-footer.html"></include>
+	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
 	<script src="../js/contact.js"></script>
 </body>
 

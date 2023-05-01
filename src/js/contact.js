@@ -1,7 +1,12 @@
 console.log("Contact Us Page");
 
+function onSubmit(token) {
+    document.getElementById("contact_form").submit();
+}
+
 function validateForm() {
     console.log("Inside");
+    return false;
     var regExOption =
         /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
 
@@ -65,6 +70,3 @@ function isNumber(input, event) {
     }
     return false;
 }
-document.getElementById("submit").addEventListener("click", function (e) {
-    e.preventDefault();
-});

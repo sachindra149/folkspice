@@ -26,6 +26,9 @@
 	// Height
 	--home-carousal-height: 90vh;
 	--inner-page-carousal-height: 65vh;
+	// Borders
+	--accordion-border-color: rgba(0, 0, 0, 0.125);
+	--light-bg: rgba(0, 0, 0, 0.05);
 }
 @mixin box-shadow($property) {
 	box-shadow: $property;
