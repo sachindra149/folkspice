@@ -1,2 +1,0 @@
-function myFunction(){var t=(document.body.scrollTop||document.documentElement.scrollTop)/(document.documentElement.scrollHeight-document.documentElement.clientHeight)*100;document.getElementById("myBar").style.width=t+"%"}$((function(){$('[data-toggle="tooltip"]').tooltip()})),$("button.navbar-toggler").click((function(){$(this).hasClass("open")?$(this).removeClass("open"):$(this).addClass("open")})),$(".year").text((new Date).getFullYear()),window.onscroll=function(){myFunction()};
-//# sourceMappingURL=index.935dbdb8.js.map

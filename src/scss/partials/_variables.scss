@@ -29,6 +29,7 @@
 	// Borders
 	--accordion-border-color: rgba(0, 0, 0, 0.125);
 	--light-bg: rgba(0, 0, 0, 0.05);
+	--tabs-border-color: rgba(0, 0, 0, 0.15);
 }
 @mixin box-shadow($property) {
 	box-shadow: $property;
