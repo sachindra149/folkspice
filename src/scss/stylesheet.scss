@@ -178,6 +178,9 @@ section {
 			font-size: 1rem;
 			line-height: 25px;
 			@extend .mediumWeight;
+			b {
+				@extend .boldWeight;
+			}
 		}
 	}
 	&.home-page-gallery {
@@ -554,16 +557,19 @@ section {
 	h3 {
 		font-size: 1.15rem;
 		margin-bottom: 25px;
+		min-height: 22px;
 		@extend .mediumWeight;
 		position: relative;
-		&::after {
-			position: absolute;
-			left: 0px;
-			width: 10%;
-			height: 1px;
-			background: var(--color-white);
-			bottom: -7px;
-			content: "";
+		&:not(:empty) {
+			&::after {
+				position: absolute;
+				left: 0px;
+				width: 10%;
+				height: 1px;
+				background: var(--color-white);
+				bottom: -7px;
+				content: "";
+			}
 		}
 	}
 	ul {
