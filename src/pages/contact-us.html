@@ -20,14 +20,10 @@
 		<div class="container">
 			<div class="fullWidth pt-4">
 				<h1 class="lightWeight pb-4 px-lg-5 text-center">Contact Us</h1>
-				<p class="px-lg-5 text-center pb-5">Lorem Ipsum is simply dummy text of the printing and typesetting
-					industry. Lorem
-					Ipsum has been the
-					industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-					and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
-					leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
-					with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
-					publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+				<p class="px-lg-5 text-center pb-5">We appreciate your interest in our local, sustainably sourced farmed
+					spices. If you have any questions or queries regarding our product offerings, delivery options, or
+					payment methods, we encourage you to reach out to us via phone, email, or social media platforms.
+					You can also submit an inquiry through our online form at your convenience.
 				</p>
 				<div class="row pt-5">
 					<div class="col-12 col-lg-6 col-md-6 col-sm-12 px-lg-5 text-left">
@@ -46,8 +42,7 @@
 						<div class="fullWidth contact-form">
 							<h4>Fill out this short form and a member of our team will get back to you within 24 hours
 							</h4>
-							<form name="contact_form" class="row pt-4" onsubmit="return validateForm()" method="post"
-								action="#">
+							<form name="contact_form" id="contact_form" class="row pt-4" method="post" action="#">
 								<div class="col-12 col-lg-6 col-md-6 pb-4">
 									<input type="text" name="firstname" id="firstname" class="fullWidth" />
 									<label for="firstname">First Name<sup>*</sup></label>
@@ -69,18 +64,13 @@
 									<label for="message">Message<sup>*</sup></label>
 								</div>
 								<div class="col-12">
-									<!-- <input type="submit" name="submit" id="submit" class="button primary large"
-										value="Contact Us" /> -->
-									<div class="g-recaptcha pb-4"
-										data-sitekey="6Ld9ctAlAAAAAEd3caBR6XSwk2LVW8uiC6ZKKYRB">
+									<div class="g-recaptcha" data-sitekey="6LeTrQomAAAAAO1tQeFE-aVi1XBiDTV_R6I1Ub5_"
+										data-callback="onSubmit" data-size="invisible">
 									</div>
 									<button class="g-recaptcha button primary large"
-										data-sitekey="6Ld9ctAlAAAAAEd3caBR6XSwk2LVW8uiC6ZKKYRB" data-callback="onSubmit"
+										data-sitekey="6LeTrQomAAAAAO1tQeFE-aVi1XBiDTV_R6I1Ub5_" data-callback="onSubmit"
 										data-action="submit" name="submit" id="submit" value="Contact Us">Contact
 										Us</button>
-									<!-- <button class="g-recaptcha button primary large"
-										data-sitekey="6Ld9ctAlAAAAAEd3caBR6XSwk2LVW8uiC6ZKKYRB" data-callback='onSubmit'
-										data-action='submit'>Submit</button> -->
 								</div>
 							</form>
 						</div>

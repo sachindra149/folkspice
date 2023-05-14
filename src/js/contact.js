@@ -1,8 +1,19 @@
 console.log("Contact Us Page");
 
 function onSubmit(token) {
-    document.getElementById("contact_form").submit();
+    // document.getElementById("contact_form").submit();
+    grecaptcha.execute();
+    response = grecaptcha.getResponse();
+    console.log(response.length);
+    if (response.length === 0) {
+        document.getElementById("submit").style.pointerEvents = "none";
+    } else {
+        validateForm();
+    }
 }
+// document.getElementById("submit").addEventListener("submit", function () {
+//     grecaptcha.execute();
+// });
 
 function validateForm() {
     console.log("Inside");

@@ -156,6 +156,7 @@ section {
 		background: url("../images/custom-wallpaper.jpeg") no-repeat;
 		background-attachment: fixed;
 		position: relative;
+		z-index: -1;
 		&::before {
 			@extend .shadowed-bg;
 		}
@@ -206,8 +207,8 @@ section {
 					h5 {
 						font-size: 1rem;
 						margin: 0px;
-						line-height: 45px;
-						padding-left: 25px;
+						line-height: 21px;
+						padding: 10px 0px 10px 25px;
 						color: var(--color-white);
 						@extend .mediumWeight;
 					}
@@ -764,6 +765,7 @@ section {
 			padding: 10px;
 			background-color: var(--light-bg);
 			border-left: 5px solid var(--accordion-border-color);
+			line-height: 30px;
 			ul {
 				margin: 10px 0px 0px 5px;
 				li {
@@ -841,6 +843,17 @@ section {
 					margin: 0px;
 				}
 			}
+			.tab-pane {
+				p {
+					padding-bottom: 10px;
+					&:last-child {
+						padding: 0px;
+					}
+					b {
+						@extend .boldWeight;
+					}
+				}
+			}			
 		}
 	}
 }
