@@ -1,5 +1,3 @@
-console.log("Contact Us Page");
-
 function onSubmit(token) {
     // document.getElementById("contact_form").submit();
     grecaptcha.execute();
@@ -8,6 +6,7 @@ function onSubmit(token) {
     if (response.length === 0) {
         document.getElementById("submit").style.pointerEvents = "none";
     } else {
+        document.getElementById("submit").style.pointerEvents = "";
         validateForm();
     }
 }
@@ -16,68 +15,57 @@ function onSubmit(token) {
 // });
 
 function validateForm() {
-    console.log("Inside");
-    return false;
+    console.log("Inside Form");
     var regExOption =
         /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
 
-    var x = document.forms["contact_form"]["firstname"].value;
-    if (x == null || x == "Name") {
-        document.getElementById("name").style.background = "#f77065";
-        document.getElementById("name").style.border = "1px solid #c51c0e";
-        document.getElementById("name").style.color = "#ffffff";
+    var firstname = document.forms["contact_form"]["firstname"].value;
+    if (firstname == null || firstname == "") {
+        document.getElementById("firstname").style.border = "1px solid #c51c0e";
+        document.getElementById("firstname").style.color = "#c51c0e";
         return false;
     } else {
-        document.getElementById("name").style.background = "#ffffff";
-        document.getElementById("name").style.border = "1px solid #D9D9D9";
-        document.getElementById("name").style.color = "#8A8C8B";
+        document.getElementById("name").style.border = "1px solid #07ab1e";
+        document.getElementById("name").style.color = "#07ab1e";
     }
-
-    var x = document.forms["contact_form"]["email"].value;
-    if (x == null || x == "Email" || !regExOption.test(x)) {
-        document.getElementById("email").style.background = "#f77065";
+    // var lastname = document.forms["contact_form"]["lastname"].value;
+    // if (lastname == null || lastname == "") {
+    //     document.getElementById("lastname").style.border = "1px solid #c51c0e";
+    //     document.getElementById("lastname").style.color = "#c51c0e";
+    // } else {
+    //     document.getElementById("lastname").style.border = "1px solid #07ab1e";
+    //     document.getElementById("lastname").style.color = "#07ab1e";
+    // }
+    var mail = document.forms["contact_form"]["email"].value;
+    if (mail == null || !regExOption.test(mail)) {
         document.getElementById("email").style.border = "1px solid #c51c0e";
-        document.getElementById("email").style.color = "#ffffff";
+        document.getElementById("email").style.color = "#c51c0e";
         return false;
     } else {
-        document.getElementById("email").style.background = "#ffffff";
-        document.getElementById("email").style.border = "1px solid #D9D9D9";
-        document.getElementById("email").style.color = "#8A8C8B";
+        document.getElementById("email").style.border = "1px solid #07ab1e";
+        document.getElementById("email").style.color = "#07ab1e";
     }
 
-    var x = document.forms["contact_form"]["contact"].value;
+    var contact_number = document.forms["contact_form"]["contact"].value;
     //var regContactNumber = /^\d+$/;
-    //console.log("!regContactNumber.test(z): ", !regContactNumber.test(x));
-    if (x == null || x == "Contact Number") {
-        document.getElementById("contact").style.background = "#f77065";
+    //console.log("!regContactNumber.test(z): ", !regContactNumber.test(contact_number));
+    if (contact_number == null || contact_number.length < 10) {
         document.getElementById("contact").style.border = "1px solid #c51c0e";
-        document.getElementById("contact").style.color = "#ffffff";
+        document.getElementById("contact").style.color = "#c51c0e";
         return false;
     } else {
-        document.getElementById("contact").style.background = "#ffffff";
-        document.getElementById("contact").style.border = "1px solid #D9D9D9";
-        document.getElementById("contact").style.color = "#8A8C8B";
+        document.getElementById("contact").style.border = "1px solid #07ab1e";
+        document.getElementById("contact").style.color = "#07ab1e";
     }
 
-    var x = document.forms["contact_form"]["query"].value;
-    if (x == null || x == "Message") {
-        document.getElementById("query").style.background = "#f77065";
+    var message = document.forms["contact_form"]["query"].value;
+    if (message == null || message.length < 10) {
         document.getElementById("query").style.border = "1px solid #c51c0e";
-        document.getElementById("query").style.color = "#ffffff";
+        document.getElementById("query").style.color = "#c51c0e";
         return false;
     } else {
-        document.getElementById("query").style.background = "#ffffff";
-        document.getElementById("query").style.border = "1px solid #D9D9D9";
-        document.getElementById("query").style.color = "#8A8C8B";
+        document.getElementById("query").style.border = "1px solid #07ab1e";
+        document.getElementById("query").style.color = "#07ab1e";
     }
-}
-
-function isNumber(input, event) {
-    console.log(input);
-    var keyCode = input.which ? input.which : input.keyCode;
-    console.log(keyCode);
-    if (parseInt(keyCode) >= 48 && parseInt(keyCode) <= 57) {
-        return true;
-    }
-    return false;
+    return true;
 }
